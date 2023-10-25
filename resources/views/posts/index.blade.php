@@ -13,6 +13,7 @@
                 <div class='post'>
                     <h2 class='shop_name'>{{ $post->shop_name }}</h2>
                     <p class='body'>{{ $post->body }}</p>
+                    <a href='/posts/create'>create</a>
                 </div>
             @endforeach
         </div>
