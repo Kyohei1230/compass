@@ -15,8 +15,16 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-            DB::table('categories')->insert([
-                    'name' => 'スーパーマーケット',
-                ]);
+        DB::table('categories')->insert([
+            'name' => 'スーパーマーケット',
+        ]);
+        
+        DB::table('categories')->insert([
+            'name' => '飲食店',
+        ]);
+        
+        DB::table('categories')->insert([
+            'name' => 'コンビニ',
+        ]);
     }
 }
