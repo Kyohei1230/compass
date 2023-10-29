@@ -32,7 +32,7 @@ class PostController extends Controller
     {
         $input = $request['post'];
         $user_id = Auth::id();
-         $input['user_id'] = 1;
+        $input['user_id'] = $user_id;
         // $input['user_id'] = $user_id;
         // dd($input);
         $post->fill($input)->save();
