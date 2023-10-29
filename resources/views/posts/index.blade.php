@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <title>Campus Compass</title>
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-    </head>
+<x-app-layout>
+    <x-slot name="header">
+        index
+    </x-slot>
     <body>
         <h1>キャンパスコンパス</h1>
         <a href='/posts/create'>create</a>
@@ -15,6 +11,7 @@
                     <h2 class='shop_name'>{{ $post->shop_name }}</h2>
                     <a href="/posts/{{ $post->id }}">{{ $post->shop_name }}</a>
                     <p class='body'>{{ $post->body }}</p>
+                    {{ Auth::user()->name }}
                     <form action="/posts/{{ $post->id }}" id="form_{{ $post->id }}" method="post">
                         @csrf
                         @method('DELETE')
@@ -35,5 +32,4 @@
                 }
             }
         </script>
-    </body>
-</html>
+</x-app-layout>
