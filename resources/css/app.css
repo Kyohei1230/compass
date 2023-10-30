@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.content__post{
+    line-height: 50px;
+}
+
+.post{
+    line-height: 50px;
+}
